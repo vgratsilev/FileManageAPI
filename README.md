@@ -1,7 +1,10 @@
-# REST API via Symfony
+REST API via Symfony
+======
+
 Works with /data directory in server root.
 
-## Functions:
+Functions:
+------
 
 ### Create file
 #### Description
@@ -64,12 +67,12 @@ GET
 #### Returns
 The JSON metadata for the file by the given <fileName>
 **Return value definitions**
-field           | description
-----------------|----------------------
-name            | The file name
-extension       | The file extension
-size            | The file size in bytes
-type            | The file type
+|field           | description |
+|----------------|-----------------------|
+|name            | The file name |
+|extension       | The file extension |
+|size            | The file size in bytes |
+|type            | The file type |
 #### Errors
 _404_ The file wasn't found
 
@@ -86,7 +89,9 @@ GET
 The JSON list of files in _/data_ directory
 
 
-## Additional features, that should be, but don't
+Additional features, that should be, but don't
+------
+
 * Storage files in compressed form through ZipArchive.
 * Using validator for file limitation: max size, type, etc. Probably via VichUploaderBundle or IphpFileStoreBundle.
 * Using https instead http and authorizing mechanism. Realization via configuration security.yml.
