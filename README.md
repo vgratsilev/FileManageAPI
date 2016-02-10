@@ -6,13 +6,15 @@ Works with /data directory in server root.
 Functions:
 ------
 
+
 ### Create file
+
 
 ##### Description
 Create file from request content
 
 ##### URL Structure
-```html
+```
 <root>/files/<fileName>
 ```
 **fileName** The name of your file
@@ -26,13 +28,15 @@ _201_ File created
 ##### Errors
 _409_ The file already exist or writing error
 
+
 ### Update file
+
 
 ##### Description
 Update file with request content
 
 ##### URL Structure
-```html
+```
 <root>/files/<fileName>
 ```
 **fileName** The name of your file
@@ -50,13 +54,15 @@ _200_ File updated
 * _404_ File not found
 * _409_ Writing error
 
+
 ### Get file
+
 
 ##### Description
 Downloads a file.
 
 ##### URL Structure
-```html
+```
 <root>/files/<fileName>
 ```
 **fileName** The name of your file
@@ -70,13 +76,15 @@ The specified file's contents
 ##### Errors
 404 The file wasn't found
 
+
 ### Get file metadata
+
 
 ##### Description
 Return file's metadata
 
 ##### URL Structure
-```html
+```
 <root>/files/<fileName>/meta
 ```
 **fileName** The name of your file
@@ -87,23 +95,23 @@ GET
 ##### Returns
 The JSON metadata for the file by the given <fileName>
 **Return value definitions**
-| field           | description |
-| ----------------|-----------------------|
-| name            | The file name |
-| extension       | The file extension |
-| size            | The file size in bytes |
-| type            | The file type |
+* _name_ - the file name
+* _extension_ - the file extension
+* _size_ - the file size in bytes
+* _type_ - the file type
 
 ##### Errors
 _404_ The file wasn't found
 
+
 ### Get list of files
+
 
 ##### Description
 Return list of file's in _/data_ directory
 
 ##### URL Structure
-```html
+```
 <root>/files
 ```
 
@@ -112,6 +120,7 @@ GET
 
 ##### Returns
 The JSON list of files in _/data_ directory
+
 
 Additional features, that should be, but don't
 ------
