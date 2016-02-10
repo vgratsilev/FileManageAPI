@@ -7,87 +7,111 @@ Functions:
 ------
 
 ### Create file
-#### Description
+
+##### Description
 Create file from request content
-#### URL Structure
+
+##### URL Structure
 ```html
 <root>/files/<fileName>
 ```
 **fileName** The name of your file
-#### Method
+
+##### Method
 POST
-#### Returns
+
+##### Returns
 _201_ File created
-#### Errors
+
+##### Errors
 _409_ The file already exist or writing error
 
 ### Update file
-#### Description
+
+##### Description
 Update file with request content
-#### URL Structure
+
+##### URL Structure
 ```html
 <root>/files/<fileName>
 ```
 **fileName** The name of your file
-#### Parameter
+
+##### Parameter
 **Append** Allows appending to file (true/false)
-#### Method
+
+##### Method
 PUT
-#### Returns
+
+##### Returns
 _200_ File updated
-#### Errors
+
+##### Errors
 * _404_ File not found
 * _409_ Writing error
 
 ### Get file
-#### Description
+
+##### Description
 Downloads a file.
-#### URL Structure
+
+##### URL Structure
 ```html
 <root>/files/<fileName>
 ```
 **fileName** The name of your file
-#### Method
+
+##### Method
 GET
-#### Returns
+
+##### Returns
 The specified file's contents
-#### Errors
+
+##### Errors
 404 The file wasn't found
 
 ### Get file metadata
-#### Description
+
+##### Description
 Return file's metadata
-#### URL Structure
+
+##### URL Structure
 ```html
 <root>/files/<fileName>/meta
 ```
 **fileName** The name of your file
-#### Method
+
+##### Method
 GET
-#### Returns
+
+##### Returns
 The JSON metadata for the file by the given <fileName>
 **Return value definitions**
-|field           | description |
-|----------------|-----------------------|
-|name            | The file name |
-|extension       | The file extension |
-|size            | The file size in bytes |
-|type            | The file type |
-#### Errors
+| field           | description |
+| ----------------|-----------------------|
+| name            | The file name |
+| extension       | The file extension |
+| size            | The file size in bytes |
+| type            | The file type |
+
+##### Errors
 _404_ The file wasn't found
 
 ### Get list of files
-#### Description
+
+##### Description
 Return list of file's in _/data_ directory
-#### URL Structure
+
+##### URL Structure
 ```html
 <root>/files
 ```
-#### Method
-GET
-#### Returns
-The JSON list of files in _/data_ directory
 
+##### Method
+GET
+
+##### Returns
+The JSON list of files in _/data_ directory
 
 Additional features, that should be, but don't
 ------
