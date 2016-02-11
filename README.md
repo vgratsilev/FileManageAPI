@@ -7,10 +7,10 @@ Functions:
 ------
 
 
-### Create file
+* ### Create file
 
 
-##### Description
+##### Description 
 Create file from request content
 
 ##### URL Structure
@@ -29,7 +29,7 @@ _201_ File created
 _409_ The file already exist or writing error
 
 
-### Update file
+* ### Update file
 
 
 ##### Description
@@ -51,11 +51,11 @@ PUT
 _200_ File updated
 
 ##### Errors
-* _404_ File not found
+* _404_ The file wasn't found
 * _409_ Writing error
 
 
-### Get file
+* ### Get file
 
 
 ##### Description
@@ -77,10 +77,10 @@ The specified file's contents
 404 The file wasn't found
 
 
-### Get file metadata
+* ### Get file metadata
 
 
-##### Description
+##### Description 
 Return file's metadata
 
 ##### URL Structure
@@ -104,11 +104,11 @@ The JSON metadata for the file by the given <fileName>
 _404_ The file wasn't found
 
 
-### Get list of files
+* ### Get list of files
 
 
 ##### Description
-Return list of file's in _/data_ directory
+Return list of files in _/data_ directory
 
 ##### URL Structure
 ```
@@ -127,5 +127,5 @@ Additional features, that should be, but don't
 
 * Storage files in compressed form through ZipArchive.
 * Using validator for file limitation: max size, type, etc. Probably via VichUploaderBundle or IphpFileStoreBundle.
-* Using https instead http and authorizing mechanism. Realization via configuration security.yml.
+* Using https instead of http and authorizing mechanism. Realization via configuration security.yml.
 * Access restriction to the file with adding additional information about file owner in file-model.
